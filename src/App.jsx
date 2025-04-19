@@ -20,11 +20,11 @@ function App() {
   const skillsRef = useRef(null);
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
-  const skillsInView = useInView(skillsRef, { amount: 0.6 });
+  const skillsInView = useInView(skillsRef, { amount: isMobile ? 0.2 : 0.6 });
   const heroInView = useInView(heroRef, { amount: 0.6 });
   const workInView = useInView(workRef, { amount: isMobile ? 0.2 : 0.6 });
   const aboutInView = useInView(aboutRef, { amount: 0.6 });
-  const contactInView = useInView(contactRef, { amount: 0.6 });
+  const contactInView = useInView(contactRef, { amount: isMobile ? 0.2 : 0.6 });
 
   useEffect(() => {
     if (heroInView) setActiveSection(0);

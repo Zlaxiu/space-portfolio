@@ -7,11 +7,11 @@ export default function Hero({ sectionRef}) {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full h-max lg:h-screen flex items-center justify-center overflow-hidden"
       id="hero"
     >
 
-      <Planet ktora={0}/>
+      <Planet ktora={0} className="scale-75 lg:scale-100"/>
 
       <div className="relative z-10 w-full max-w-7xl px-6 md:px-12 mt-36 lg:mt-15 flex flex-col md:flex-row  justify-between gap-12">
         <div className="text-white max-w-xl relative lg:my-auto lg:mr-60">
@@ -51,7 +51,7 @@ export default function Hero({ sectionRef}) {
           <Astronaut ktory={0}/>          
         </div>
       </div>
-      <div className="absolute bottom-10 w-full flex justify-center items-center cursor-pointer" onClick={()=>window.history.replaceState(null, "", `#projects`)}>
+      <div className="absolute bottom-0 lg:bottom-10 w-full flex justify-center items-center cursor-pointer" onClick={()=>window.history.replaceState(null, "", `#projects`)}>
         <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white/80 flex justify-center items-start p-2">
           <motion.div
             animate={{y:[0,24,0]}}
