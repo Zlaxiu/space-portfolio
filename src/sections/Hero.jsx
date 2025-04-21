@@ -39,7 +39,7 @@ export default function Hero({ sectionRef}) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            <a href="#github" className="ml-5 bg-gradient-to-r from-purple-400 to-pink-500 hover:bg-cyan-400 text-white rounded-full font-semibold transition-all duration-300">
+            <a href="https://github.com/Zlaxiu" className="ml-5 bg-gradient-to-r from-purple-400 to-pink-500 hover:bg-cyan-400 text-white rounded-full font-semibold transition-all duration-300">
               <img src={gitHubLogo} className="h-10 w-10" alt="github-logo"/>
             </a>
             

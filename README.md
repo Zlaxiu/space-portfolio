@@ -1,3 +1,4 @@
+![port](https://raw.githubusercontent.com/Zlaxiu/space-portfolio/refs/heads/main/src/assets/projects/space-portfolio.png)
 # Space Portfolio
 A cosmic-themed portfolio showcasing my front-end development skills, featuring planets, animations, and interactive UI elements.
 ## Demo
