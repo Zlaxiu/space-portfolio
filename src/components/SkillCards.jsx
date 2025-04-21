@@ -13,7 +13,7 @@ const SkillCards = () => {
             >
                 Skills & Technologies:
             </motion.h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 py-32 justify-center place-items-center z-20">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 py-32 justify-center place-items-center z-20">
                 {skills.map((item,index)=>(
                     <SkillCard
                         key={index}

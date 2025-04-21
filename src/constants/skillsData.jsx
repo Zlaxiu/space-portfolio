@@ -1,5 +1,7 @@
-import {SiFramer, SiFigma, SiJavascript, SiReact, SiTailwindcss, SiGithub, SiHtml5, SiCss3, SiVite} from "react-icons/si";
+import {SiFramer, SiAdobephotoshop, SiFigma, SiJavascript, SiReact, SiTailwindcss, SiGithub, SiHtml5, SiCss3, SiVite} from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
+import { FaGitAlt } from "react-icons/fa";
+
 export const skills = [
   {
     icon: <SiHtml5 className="text-orange-500" />,
@@ -32,9 +34,9 @@ export const skills = [
     description: "Version control and collaboration with Git",
   },
   {
-    icon: <SiVite className="text-purple-400" />,
-    label: "Vite",
-    description: "Lightning-fast build tool and dev server",
+    icon: <FaGitAlt className="text-orange-600" />,
+    label: "Git",
+    description: "Version control, team collaboration, and managing code history effectively",
   },
   {
     icon: <SiFramer className="text-white" />,
@@ -50,5 +52,15 @@ export const skills = [
     icon: <BiLogoVisualStudio className="text-sky-400" />,
     label: "VSC",
     description: "Efficient code editing with extensions and debugging tools",
+  },
+  {
+    icon: <SiAdobephotoshop className="text-blue-800" />,
+    label: "Photoshop",
+    description: "Designing sleek UI visuals, image editing",
+  },
+  {
+    icon: <SiVite className="text-purple-400" />,
+    label: "Vite",
+    description: "Lightning-fast build tool and dev server",
   }
 ];

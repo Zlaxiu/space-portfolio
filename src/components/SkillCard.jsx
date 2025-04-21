@@ -8,7 +8,9 @@ const colorMap = {
     "sky-400": "rgba(56, 189, 248, 0.5)",
     "white": "rgba(255, 255, 255, 0.4)",
     "purple-400": "rgba(192, 132, 252, 0.5)",
-    "pink-500": "rgba(236, 72, 153, 0.5)"
+    "pink-500": "rgba(236, 72, 153, 0.5)",
+    "orange-600": "rgba(241, 80, 47, 0.5)",
+    "blue-800" : "rgba(0, 30, 54 , 0.5)"
   };
 const SkillCard = (props) => {
     const [hovered, setHovered] = useState(false);
