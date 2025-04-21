@@ -17,32 +17,37 @@ const Contact = ({ sectionRef }) => {
     const handleChange = (e) =>{
         const {name, value} = e.target;
         setForm({...form, [name]:value,})
-        console.log(form)
     }
     const handleSubmit = (e) =>{
         e.preventDefault();
-        setLoading(true);
-        emailjs.send(
-            "service_3n9ce5t",
-            "template_aag6nla",
-            {
-              from_name: form.name,
-              to_name: "Bartek",
-              from_email: form.email,
-              to_email: "bbanas797@gmail.com",
-              message: form.message,
-            },
-            "jyuFlzqxV_mnM-uNs"
-          ).then(() => {
-            setLoading(false);
-            alert("Message sent!");
-            setForm({ name: '', email: '', message: '' });
-          })
-          .catch((error) => {
-            setLoading(false);
-            console.error(error);
-            alert("Something went wrong. Please try again.");
-          });
+        if(form.name !== '' && form.email !== '' && form.message !== ''){
+            
+            setLoading(true);
+            emailjs.send(
+                "service_3n9ce5t",
+                "template_aag6nla",
+                {
+                    from_name: form.name,
+                    to_name: "Bartek",
+                    from_email: form.email,
+                    to_email: "bbanas797@gmail.com",
+                    message: form.message,
+                },
+                "jyuFlzqxV_mnM-uNs"
+            ).then(() => {
+                setLoading(false);
+                alert("Message sent!");
+                setForm({ name: '', email: '', message: '' });
+            })
+            .catch((error) => {
+                setLoading(false);
+                console.error(error);
+                alert("Something went wrong. Please try again.");
+            });
+        }
+        else{
+            alert("Please complete all fields")
+        }
     }
 
     return (
