@@ -32,11 +32,11 @@ export const Contact = ({ sectionRef }:ContactProps):JSX.Element => {
     const handleSubmit = (e: FormEvent<HTMLFormElement>):void =>{
         e.preventDefault();
         if(form.name !== '' && form.email !== '' && form.message !== ''){
-            
+            console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_SERVICE_ID)
             setLoading(true);
             emailjs.send(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
                 {
                   from_name: form.name,
                   to_name: "Bartek",
@@ -44,7 +44,7 @@ export const Contact = ({ sectionRef }:ContactProps):JSX.Element => {
                   to_email: "bbanas797@gmail.com",
                   message: form.message,
                 },
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                import.meta.env.VITE_EMAILJS_SERVICE_ID
               ).then(() => {
                 setLoading(false);
                 alert("Message sent!");
